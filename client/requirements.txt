@@ -1,0 +1,8 @@
+prompt_toolkit
+prettytable
+botocore
+requests
+termcolor
+colorama
+justifytext
+flask_mongoengine

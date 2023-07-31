@@ -1,0 +1,11 @@
+[*] Reconnaissance
+    reconnaissance/azure_check_azure_usage
+    reconnaissance/misc_crtsh
+    reconnaissance/aws_s3_bucket_name_fuzzer
+    reconnaissance/azure_fuzz_dns_suffixes
+    reconnaissance/azuread_user_enum
+
+
+[*] Enum:
+    enum/aws_iam_enum_users
+
