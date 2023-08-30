@@ -5,7 +5,8 @@ aiohttp
 aliyun-python-sdk-kms==2.4.1
 flask-sqlalchemy==2.5
 SQLAlchemy==1.4.40
-requests==2.29.0
+#requests==2.29.0
+requests>=2.31.0
 docker
 boto3
 aniso8601==8.0.0
@@ -15,13 +16,14 @@ Flask==2.2.5
 Flask-RESTful==0.3.8
 #Flask-SQLAlchemy==2.4.3
 itsdangerous==1.1.0
-Jinja2==2.11.2
+#Jinja2==2.11.2
+jinja2>=2.11.3
 MarkupSafe==1.1.1
 pytz==2020.1
 six==1.15.0
-Werkzeug==1.0.1
+Werkzeug>=2.2.3
 flask_httpauth
-waitress~=2.0.0
+waitress==2.1.1
 flask-mongoengine
 docker~=5.0.3
 flask_bcrypt
