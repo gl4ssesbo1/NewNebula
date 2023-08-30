@@ -11,7 +11,7 @@ boto3
 aniso8601==8.0.0
 #click==7.1.2
 click==8.0
-Flask==1.1.2
+Flask==2.2.5
 Flask-RESTful==0.3.8
 #Flask-SQLAlchemy==2.4.3
 itsdangerous==1.1.0
