@@ -37,7 +37,7 @@ def exploit(profile, workspace):
     # Get user's Info
     # --------------------------------------------------
     try:
-        users = json.loads(requests.get("https://graph.microsoft.com/v1.0/users",
+        users = json.loads(requests.get("https://graph.microsoft.com/beta/users",
                            headers={
                                 'Content-Type': 'application/json',
                                 'Authorization': 'Bearer {}'.format(access_token)

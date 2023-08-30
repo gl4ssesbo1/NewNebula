@@ -40,22 +40,39 @@ parser.add_argument('-w', '--workspace', type=str, help='The Workspace to work w
 parser.add_argument('-u', '--username', type=str, help='The username to login as (Default \'cosmonaut\').')
 parser.add_argument('-p', '--password', type=str, help='The password for user \'cosmonaut\'. (Required)', required=True)
 parser.add_argument("-b", action='store_true', help="Do not print banner")
+parser.add_argument("-c", "--config-file", help="Config File path")
 args = parser.parse_args()
 
-apihost = "http://{}:{}".format(args.apiHost, args.apiPort)
-system = platform.system()
-global username
-username = args.username
+if args.config_file is None:
+    apihost = "http://{}:{}".format(args.apiHost, args.apiPort)
+    system = platform.system()
+    global username
+    username = args.username
 
-if username == None:
-    username = 'cosmonaut'
+    if username == None:
+        username = 'cosmonaut'
 
-password = args.password
-jwt_token = ""
+    password = args.password
+    jwt_token = ""
+    workspace = args.workspace
+else:
+    if args.password or args.workspace:
+        print("Either use a config file or use -dn (database name) and -p (password)")
+        exit()
+    else:
+        configFile = open(args.config_file, "r")
+        configFileJson = json.load(configFile)
 
+        apiH = configFileJson['databaseHost']
+        apiP = 5000
+
+        apihost = "http://{}:{}".format(args.apiHost, args.apiPort)
+
+        workspace = configFileJson['databaseName']
+        password = configFileJson['password']
 
 try:
-    jwt_token_dict = json.loads(requests.post("{}/api/latest/cosmonauts".format(apihost), json={"cosmonaut_name": username, "cosmonaut_pass":password}).text)
+    jwt_token_dict = json.loads(requests.post("{}/api/latest/cosmonauts".format(apihost), headers={'Content-Type': 'application/json'}, json={"cosmonaut_name": username, "cosmonaut_pass":password}).text)
     if 'token' in jwt_token_dict:
         jwt_token = jwt_token_dict['token']
 
@@ -64,6 +81,7 @@ try:
         exit()
 
 except requests.exceptions.ConnectionError:
+    print(str(sys.exc_info()))
     print(colored("[*] Failed to establish a new connection to the Teamserver API Server", "red"))
     exit()
 
@@ -72,7 +90,6 @@ except:
     exit()
 
 workspaces = []
-workspace = args.workspace
 module = ''
 module_char = ''
 particle = ''

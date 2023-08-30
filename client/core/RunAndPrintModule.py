@@ -162,6 +162,11 @@ def PrintModule(run_module_json):
                     "------------------------------------------------------------------\n",
                     "yellow", attrs=['bold'])
             pipepager(output, cmd='less -FR')
+            yn = input("Do you want to print the output? [y/N] ")
+            if yn != "Y" and yn != "y":
+                continue
+            else:
+                print(output)
             output = ""
 
         """for title_name, json_data in run_module_json.items():

@@ -1,0 +1,41 @@
+version: '3.9'
+
+networks:
+  my_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+
+services:
+  mongo_db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      my_network:
+        ipv4_address: 172.20.0.3
+    logging:
+      driver: "none"
+
+  nebula_teamserver:
+    depends_on:
+      - mongo_db
+    #image: python:3.9
+    ports:
+      - "5000:5000"
+    build:
+      dockerfile: ./Dockerfile
+    networks:
+      - my_network
+
+  nebula_client:
+
+    #depends_on:
+    #  - nebula_teamserver
+    build:
+      dockerfile: ./client/Dockerfile
+    networks:
+      - my_network
+      #my_network:
+        #ipv4_address: 172.20.0.2

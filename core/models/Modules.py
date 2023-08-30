@@ -92,6 +92,7 @@ def list_modules():
                 mod = module + "/" + x.split(".py")[0]
                 thedir = mod.split("/")[0]
                 sys.path.insert(0, "./module/" + thedir)
+                print(mod)
                 imported_module = __import__(mod.split("/")[1])
                 list1['amodule'] = mod
                 list1['description'] = imported_module.description

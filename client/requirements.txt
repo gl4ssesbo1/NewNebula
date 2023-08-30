@@ -1,3 +1,4 @@
+click==7.1.1
 prompt_toolkit
 prettytable
 botocore
@@ -6,3 +7,6 @@ termcolor
 colorama
 justifytext
 flask_mongoengine
+urllib3
+Flask==2.2.3
+

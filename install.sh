@@ -99,11 +99,15 @@ sudo python3 -m pip install -r requirements.txt $1 #> /dev/null $2 > /dev/null
 printf "$Green [*] Installed Python Libraries\n$Color_Off"
 printf "$Green ---------------------------------------------------------\n$Color_Off"
 
+# shellcheck disable=SC2059
 printf "$Yellow [*] Installing CLI Client Python Libraries\n$Color_Off"
 python3 -m pip install -r ./client/requirements.txt $1 #> /dev/null $2 > /dev/null
+# shellcheck disable=SC2059
 printf "$Green [*] Installed Python Libraries\n$Color_Off"
+# shellcheck disable=SC2059
 printf "$Green ---------------------------------------------------------\n$Color_Off"
 
+# shellcheck disable=SC2059
 printf "$Yellow [*] Installing Python Libraries\n$Color_Off"
 python3 -m pip install -r ./clientGUI/requirements.txt $1 #> /dev/null $2 > /dev/null
 printf "$Green [*] Installed Python Libraries\n$Color_Off"

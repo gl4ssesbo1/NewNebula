@@ -1,6 +1,8 @@
 import json
-import sys, os
+import sys
+import os
 from termcolor import colored
+#import termcolor
 from flask import Flask
 from waitress import serve
 from database.db import initialize_db
@@ -39,16 +41,42 @@ parser.add_argument('-ah', '--apiHost', type=str, help='The API Server Host. (De
 parser.add_argument('-ap', '--apiPort', type=int, help='The API Server Port. (Default: 5000)', default=5000)
 parser.add_argument('-dh', '--databaseHost', type=str, help='The MongoDB Database Server Host. (Default: localhost)', default='localhost')
 parser.add_argument('-dp', '--databasePort', type=int, help='The MongoDB Database Server Port. (Default: 27017)', default=27017)
-parser.add_argument('-dn', '--databaseName', type=str, help='The MongoDB Database Name. (Required)', required=True)
+parser.add_argument('-dn', '--databaseName', type=str, help='The MongoDB Database Name. (Required)')
 parser.add_argument('-p', '--password', type=str, help='The password for user \'cosmonaut\'. (Required)')
+parser.add_argument('-c', '--config-file', type=str, help='The config file path with the configs.')
 args = parser.parse_args()
 
-if args.password:
-    password = args.password
+if args.config_file is None:
+    if not args.password and not args.databaseName:
+        print("Either use a config file or use -dn (database name) and -p (password)")
+        exit()
+    else:
+        if args.password:
+            password = args.password
+        else:
+            password = getpass("Password: ")
+            while password == "":
+                password = getpass("Password: ")
+
+
+        apihost = "0.0.0.0"
+        apiport = 5000
+        host = args.databaseHost
+        port = args.databasePort
+        password = args.password
+        database = args.databaseName
 else:
-    password = getpass("Password: ")
-    while password == "":
-        password = getpass("Password: ")
+    if args.password or args.databaseName:
+        print("Either use a config file or use -dn (database name) and -p (password)")
+        exit()
+    else:
+        configFile = open(args.config_file, "r")
+        configFileJson = json.load(configFile)
+
+        host = configFileJson['databaseHost']
+        port = int(configFileJson['databasePort'])
+        database = configFileJson['databaseName']
+        password = configFileJson['password']
 
 all_count = 0
 show = [
@@ -82,6 +110,7 @@ nr_of_modules = {
     'misc':"",
     'postexploitation': ""
 }
+
 for module in show:
     module_count = 0
     arr = os.listdir("./module/" + module)
@@ -167,7 +196,7 @@ input_text += ("{} privesc\t{} reconnaissance\t{} stager\t{}postexploitation\n".
                                                         nr_of_modules['stager'], nr_of_modules['postexploitation']))
 input_text += ("{} misc\n".format(nr_of_modules['misc']))
 
-print(input_text)
+print (input_text)
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
@@ -175,17 +204,13 @@ jwt = JWTManager(app)
 jwt_token = ''.join(random.choice(string.ascii_lowercase + string.ascii_uppercase + string.digits) for _ in range(32))
 app.config['JWT_SECRET_KEY'] = jwt_token
 
-host = args.databaseHost
-port = args.databasePort
 
-database = args.databaseName
-
-'''
 app.config['MONGODB_SETTINGS'] = {
-    'host': 'mongodb://{}:{}/{}'.format(host, port, workspace),
+    'host': 'mongodb://{}:{}/{}'.format(host, port, database),
 }
-'''
+
 try:
+    '''
     a_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     location = ("127.0.0.1", port)
     result_of_check = a_socket.connect_ex(location)
@@ -210,6 +235,7 @@ try:
         if not os. path.exists("./workspaces/{}".format(database)):
             os.mkdir("{}/workspaces/{}".format(os.getcwd(), database))
 
+        
         container = client.containers.run(
             'mongo',
             ports={
@@ -229,17 +255,16 @@ try:
             colored("[*] MongoDB started on container ID", "green"),
             colored(container.id, "blue")
         ))
-
-    """app.config['MONGODB_SETTINGS'] = {
+    '''
+    app.config['MONGODB_SETTINGS'] = {
         'host': 'mongodb://{0}:{1}/{2}'.format(host, port, database)
         #'host': 'mongodb://{0}:{1},{0}:{2},{0}:{3}/{4}?replicaSet=mongodb-replicaset'.format(host, port, port+1, port+2, database)
-    }"""
+    }
 
     app.config['MONGODB_DB'] = database
     app.config['MONGODB_HOST'] = host
     app.config['MONGODB_PORT'] = port
     app.config['MONGODB_CONNECT'] = False
-
 
     print(colored('------------------------------------------------------------', "green"))
 
@@ -260,10 +285,10 @@ try:
     ))
 
     # I am not using these on Nebula. So it's not an information disclosure. It's just sth I plan to use latter.
-    '''
+
     app.config['MONGODB_USERNAME'] = 'user'
     app.config['MONGODB_PASSWORD'] = 'pass'
-    '''
+
     initialize_db(app)
 
     try:
@@ -280,6 +305,16 @@ try:
         body['cosmonaut_pass'] = generate_password_hash(password).decode('utf8')
         cosmonaut.update(**body)
 
+    #import socket
+    sIP = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sIP.connect(("8.8.8.8", 80))
+
+    print('{}{}{}'.format(
+        colored("[*] Teamserver IP address is '", "green"),
+        colored(sIP.getsockname()[0], "blue"),
+        colored("'", "green"))
+    )
+    sIP.close()
 
     print('{}{}{}'.format(
         colored("[*] User '", "green"),

